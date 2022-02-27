@@ -1,0 +1,273 @@
+.content {
+	margin: 0 auto;
+}
+
+/* 步驟區塊 */
+.process_block {
+	position: relative;
+	margin: 24px auto;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.mobile_process_name {
+	display: none;
+}
+
+.line {
+	width: 90%;
+	height: 2px;
+	background: #e1e1e1;
+	left: 5%;
+	top: 25%;
+	position: absolute;
+}
+
+.step_block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.step {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+	color: #e1e1e1;
+	z-index: 2;
+}
+
+.step p {
+	padding: 6px;
+	width: 30px;
+	height: 30px;
+	background: #e1e1e1;
+	border-radius: 50%;
+	margin: 0 0 8px 0;
+	box-sizing: border-box;
+}
+
+.step.active p {
+	padding: 6px;
+	border: 2px solid #38b465;
+	border-radius: 50%;
+	color: #38b465;
+	background: #fff;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 8px 0;
+	box-sizing: border-box;
+}
+
+.step.active span {
+	color: #38b465;
+}
+
+/* 下方表單相關內容 */
+.form_container {
+	box-shadow: 0px 0px 8px #c5c5c5;
+	box-sizing: border-box;
+}
+
+.form_container .content {
+	line-height: 1.5;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 32px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.form_container .content p {
+	font-size: 18px;
+}
+
+.form_inside {
+	font-size: 14px;
+	width: 72%;
+	padding: 0 0 0 28%;
+}
+
+.form_inside ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.form_inside ul li {
+	display: flex;
+	margin: 16px 0 0;
+	align-items: baseline;
+}
+
+.form_inside ul li label {
+	width: 12%;
+	text-align: right;
+	margin: 0 16px 0 0;
+}
+
+.form_inside ul li input {
+	padding: 8px;
+}
+
+.form_inside ul li input[type='text'] {
+	width: calc(88% - 16px);
+}
+
+.form_inside ul li .reserve_date_block {
+	display: flex;
+	flex-direction: column;
+}
+
+.form_inside ul li .select_area_box {
+	display: flex;
+	flex-direction: column;
+	width: calc(88% - 16px);
+}
+
+/* 下拉選單的部分 */
+select {
+	border: 1px solid #e1e1e1;
+	border-radius: 4px;
+	padding: 8px 12px;
+	line-height: 22px;
+	color: #212529;
+}
+
+.option_block {
+	width: 100%;
+	display: flex;
+}
+
+.option_block select {
+	width: calc((100% - 16px) / 2);
+	margin: 0 16px 0 0;
+}
+
+.option_block select:last-child {
+	margin: 0px;
+}
+
+/* 表格的部分 */
+.bank_branch_table {
+	margin: 16px 0 0 0;
+	display: none;
+}
+
+.bank_branch_table table {
+	width: 100%;
+	border: 1px solid #e1e1e1;
+}
+
+.bank_branch_table table thead {
+	background: #f5fbf7;
+}
+
+.bank_branch_table table th,
+.bank_branch_table table td {
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #e1e1e1;
+}
+
+/* alert 錯誤訊息 */
+.alert {
+	color: rgb(255, 60, 60);
+}
+
+/* 預約時間 */
+.time_block {
+	display: flex;
+	width: calc(88% - 16px);
+	flex-direction: column;
+}
+.time_block ul {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.time_block ul li {
+	border: 1px solid #e1e1e1;
+	padding: 8px 24px;
+	border-radius: 4px;
+	margin: 0 16px 16px 0;
+	cursor: pointer;
+}
+
+.time_block ul li.disabled {
+	background: rgb(213, 213, 213);
+}
+
+.time_block ul li.active {
+	background: #38b465;
+	color: #fff;
+}
+
+input[name='dept'] {
+	accent-color: #39a761;
+}
+
+.form_inside ul li.init_hide {
+	display: none;
+}
+
+/* RWD 部分 */
+@media screen and (max-width: 768px) {
+	.process_block {
+		padding: 0px 16px;
+		box-sizing: border-box;
+	}
+	.step span {
+		display: none;
+	}
+	.mobile_process_name {
+		display: flex;
+		font-size: 20px;
+		color: #38b465;
+		justify-content: center;
+	}
+	.form_container .content {
+		padding: 32px 16px;
+	}
+	.form_inside {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0px;
+		margin: 32px 0 0 0;
+	}
+	.form_inside ul li {
+		flex-direction: column;
+		margin: 0px 0px 16px;
+	}
+	.form_inside ul li label {
+		width: 100%;
+		margin: 0px 0px 8px;
+		text-align: left;
+	}
+	.form_inside ul li input {
+		box-sizing: border-box;
+	}
+	.form_inside ul li .select_area_box {
+		width: 100%;
+	}
+	.form_inside ul li .reserve_date_block {
+		width: 100%;
+	}
+	.time_block {
+		width: 100%;
+	}
+	.time_block ul {
+		justify-content: flex-start;
+	}
+	.time_block ul li {
+		margin: 0 16px 16px 0;
+	}
+}

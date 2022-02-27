@@ -1,0 +1,70 @@
+/* 共用樣式 */
+.container {
+	width: 100%;
+	position: relative;
+}
+
+.container header {
+	background: #38b465;
+	height: 60px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.logo {
+	background: url('../images/logo--pc.png') no-repeat;
+	background-position: left -5px;
+	width: 28%;
+	height: 45px;
+}
+
+header p {
+	font-size: 20px;
+}
+/* 預約按鈕 */
+.reserve_button {
+	background-color: #ff6000;
+	color: #fff;
+	border: none;
+	border-radius: 28px;
+	padding: 10px 100px;
+	font-size: 20px;
+	margin: 80px auto;
+	cursor: pointer;
+}
+
+/* footer */
+footer {
+	background: #f2f2f2;
+	width: 100%;
+	color: #a4a4a4;
+	font-size: 14px;
+	padding: 16px;
+	text-align: center;
+  box-sizing: border-box;
+}
+
+/* go_top_button */
+.go_top_button {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 45px;
+}
+
+/* RWD */
+@media screen and (max-width:768px) {
+  .container header{
+    justify-content: center;
+  }
+  .logo {
+    background: url('../images/logo--mobile.png') no-repeat;
+    background-size: contain;
+    width: 15%;
+  }
+}

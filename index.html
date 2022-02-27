@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/common.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"></div>
+      <p>分行服務預約</p>
+    </header>
+    <div class="banner">
+      <div class="text_block">
+        <h5>分行服務預約</h5>
+        <p>事先網路預約<br />減少等待時間</p>
+      </div>
+    </div>
+    <div class="feature_block">
+      <p class="feature_title">
+        簡單<span>3</span>步驟，輕鬆便利完成預約
+      </p>
+      <div class="row">
+        <ul>
+          <li class="step_block">
+            <div class="step_inside">
+              <div class="icon">
+                <img src="./images/fill-paper-1@3x.png" alt="" />
+              </div>
+              <div class="describe_text">
+                <div class="step_title">
+                  <span>Step1.</span>
+                  <p>填寫基本資料</p>
+                </div>
+                <p>鍵入簡單欄位完成身份驗證</p>
+              </div>
+            </div>
+            <div class="cross_line"></div>
+          </li>
+          <li class="step_block">
+            <div class="step_inside">
+              <div class="icon">
+                <img src="./images/bonus-prograss@3x.png" alt="" />
+              </div>
+              <div class="describe_text">
+                <div class="step_title">
+                  <span>Step2.</span>
+                  <p>完成分行預約</p>
+                </div>
+                <p>選擇要預約的業務/分行/日期/時間</p>
+              </div>
+            </div>
+            <div class="cross_line"></div>
+          </li>
+          <li class="step_block">
+            <div class="step_inside">
+              <div class="icon">
+                <img src="./images/extension@3x.png" alt="" />
+              </div>
+              <div class="describe_text">
+                <div class="step_title">
+                  <span>Step3.</span>
+                  <p>前往分行辦理</p>
+                </div>
+                <p>親自前往分行辦理業務</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="reserve_button" onclick="goToNext()">立即預約</button>
+    </div>
+    <footer>© 國泰世華商業銀行股份有限公司</footer>
+    <div class="go_top_button">
+      <img src="./images/go-top@3x.png" alt="" />
+    </div>
+  </div>
+  <script>
+    function goToNext() {
+      window.location.href = './reserve.html';
+    }
+  </script>
+</body>
+
+</html>

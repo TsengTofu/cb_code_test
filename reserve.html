@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/reset.css" />
+		<link rel="stylesheet" href="./styles/common.css" />
+		<link rel="stylesheet" href="./styles/reserve.css" />
+		<title>國泰世華銀行測試考題</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<div class="logo"></div>
+				<p>分行服務預約</p>
+			</header>
+			<div class="content">
+				<div class="process_block">
+					<div class="line"></div>
+					<div class="step_block">
+						<div class="step active">
+							<p>1</p>
+							<span>預約分行</span>
+						</div>
+						<div class="step">
+							<p></p>
+							<span>資料確認</span>
+						</div>
+					</div>
+					<div class="mobile_process_name">預約分行</div>
+				</div>
+				<div class="form_container">
+					<div class="content">
+						<p>
+							親愛的客戶您好：<br />
+							請選擇要預約的分行及時段！
+						</p>
+						<div class="form_inside">
+							<ul>
+								<li>
+									<label for="">身分證字號</label>
+									<input
+										type="text"
+										value="A123456789"
+										disabled
+									/>
+								</li>
+								<li>
+									<label for="">手機號碼</label>
+									<input
+										type="text"
+										value="0912345678"
+										disabled
+									/>
+								</li>
+								<li>
+									<label for="">姓名</label>
+									<input
+										type="text"
+										value="黃小明"
+										disabled
+									/>
+								</li>
+								<li>
+									<label for="">預約業務</label>
+									<input type="text" value="開戶" disabled />
+								</li>
+								<li>
+									<label for="">分行區域</label>
+									<div class="select_area_box">
+										<div class="option_block">
+											<select name="" id="choose_city">
+												<option
+													value=""
+													disabled
+													selected
+												>
+													請選擇縣市
+												</option>
+												<option value="taipei">
+													台北市
+												</option>
+												<option value="new_taipei">
+													新北市
+												</option>
+											</select>
+											<select name="" id="choose_area">
+												<option
+													value=""
+													disabled
+													selected
+												>
+													請選擇行政區
+												</option>
+												<option value="xinyi">
+													信義區
+												</option>
+												<option value="shongshan">
+													松山區
+												</option>
+											</select>
+										</div>
+										<span class="alert"
+											>該區域目前無分行服務，請選擇其他區域</span
+										>
+										<div class="bank_branch_table">
+											<table>
+												<thead>
+													<tr>
+														<th>選擇</th>
+														<th>分行名稱</th>
+														<th>地址</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<input
+																type="radio"
+																id="dept"
+																name="dept"
+																value="basic"
+																checked
+															/>
+														</td>
+														<td>營業部</td>
+														<td>
+															台北市信義區松仁路7號
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input
+																type="radio"
+																id="dept"
+																name="dept"
+																value="xinyi"
+															/>
+														</td>
+														<td>信義分行</td>
+														<td>
+															台北市信義區信義路
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input
+																type="radio"
+																id="dept"
+																name="dept"
+																value="shongshan"
+															/>
+														</td>
+														<td>松山分行</td>
+														<td>
+															台北市松山區長安東路
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+								<li class="init_hide">
+									<label for="reserve_date">預約日期</label>
+									<div class="reserve_date_block">
+										<select
+											name="reserve_date"
+											id="reserve_date"
+										>
+											<option
+												value="2021/07/26(ㄧ)"
+												disabled
+												selected
+											>
+												2021/07/26(ㄧ)
+											</option>
+											<option value="2021/07/28(三)">
+												2021/07/28(三)
+											</option>
+											<option value="2021/07/29(四)">
+												2021/07/29(四)
+											</option>
+											<option value="2021/07/30(五)">
+												2021/07/30(五)
+											</option>
+										</select>
+										<span class="alert"
+											>請選擇銀行營業日</span
+										>
+									</div>
+								</li>
+								<li class="init_hide">
+									<label for="">預約時間</label>
+									<div class="time_block">
+										<ul>
+											<li class="disabled">09：00</li>
+											<li class="active">10：00</li>
+											<li>11：00</li>
+											<li>13：00</li>
+											<li class="disabled">14：00</li>
+										</ul>
+										<span class="alert"
+											>若該分行無可預約時段，可以選擇鄰近分行。</span
+										>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<button class="reserve_button">下一步</button>
+					</div>
+				</div>
+			</div>
+			<footer>© 國泰世華商業銀行股份有限公司</footer>
+			<div class="go_top_button">
+				<img src="./images/go-top@3x.png" alt="" />
+			</div>
+		</div>
+		<script>
+			const city = document.getElementById('choose_city');
+			const area = document.getElementById('choose_area');
+			const bankBranchTableList =
+				document.querySelector('.bank_branch_table');
+			const chooseBank = document.querySelectorAll('input[type="radio"]');
+			let chooseCity = '';
+			let chooseArea = '';
+			let chooseBranchBank = '';
+
+			city.addEventListener('change', function (e) {
+				chooseCity = e.target.value;
+				if (chooseCity !== '' && chooseArea !== '') {
+					bankBranchTableList.style.display = 'block';
+				}
+			});
+
+			area.addEventListener('change', function (e) {
+				chooseArea = e.target.value;
+				if (chooseCity !== '' && chooseArea !== '') {
+					bankBranchTableList.style.display = 'block';
+				}
+			});
+
+			const hideBlock = document.querySelectorAll('.init_hide');
+			chooseBank.forEach((input) => {
+				input.addEventListener('change', function (e) {
+					chooseBranchBank = e.target.value;
+					if (chooseBranchBank !== '') {
+						console.log(hideBlock);
+						hideBlock.forEach((block) => {
+							block.style.display = 'flex';
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
